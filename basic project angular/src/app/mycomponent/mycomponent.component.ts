@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mycomponent.component.css']
 })
 export class MycomponentComponent implements OnInit {
-
-  constructor() { }
-
+  person;
+  mark : number;
+  constructor() { 
+    this.person = {firstName : 'Bhava',lastName : 'Sai'}
+    this.mark = 80;
+  }
+  showName(){
+    return this.person.firstName + this.person.lastName;
+  }
   ngOnInit() {
 
   }

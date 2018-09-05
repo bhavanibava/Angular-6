@@ -1,13 +1,34 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>
+<div>
+  <h1>  
     Welcome to {{ title }}!
-</h1>
-<input type="text" placeholder="Enter Name" [(ngModel)]='name'>
-<!-- <button class="btn">submit</button> -->
+  </h1>
+  Enter your Details:<br>
+  <input type="text" placeholder="Enter your R.No" [(ngModel)]='no'><br>
+  <input type="text" placeholder="Enter your Name" [(ngModel)]='name'><br>
+  <input type="text" placeholder="Enter your Age " [(ngModel)]='age'><br>
+  <input type="text" placeholder="Enter your dept" [(ngModel)]='dept'><br>
+  <input type="text" placeholder="Enter your collage_Name" [(ngModel)]='clg_name'><br>
+  <button class="btn span2" id="submitButton">submit</button> 
+  <button class="btn span2" id="clearId">clear</button>
+  <br>
+  <p id="displayId" style="display: none">
+    R.No : {{no}}<br>
+    Name : {{name}}<br>
+    Age : {{age}}<br>
+    Dept : {{dept}}<br>
+    Collage Name : {{clg_name}}
+  </p>
+  <br>
+  <!-- add two numbers -->
+  ADD two numbers: 
+  <input type="number" [(ngModel)]='value1'><br>
+  <input type="number" [(ngModel)]='value2'><br>
+  <button class="btn" id="addId">Add</button>
+  <p id="resultId" style="display: none">result : {{addition()}}</p>
+</div>
 <br>
-Name : {{name}}
-
-<div class="row-fluid" style="background-color: lightblue">
+<div class="row-fluid">
   <mycomponent>
     welcome to my new component
   </mycomponent>

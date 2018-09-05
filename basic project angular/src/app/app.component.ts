@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent{
   title = 'myApp';
-  // public name = 'BhavaSai';
+  value1 : number;
+  value2 : number;
+  Name :string;
+  constructor(){
+    this.value1 = 40;
+    this.value2 = 20;
+  }
+  show(){
+    return this.Name;
+  }
+  addition(){
+    return this.value1+this.value2;
+  }
 }

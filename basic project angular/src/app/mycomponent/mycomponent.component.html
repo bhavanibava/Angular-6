@@ -1,6 +1,13 @@
 <p>
   mycomponent works!
-</p>
 <!-- two way binding sample -->
-<input type="text" [(ngModel)]='name'><br>
-<label>Name: {{name}}</label> 
+<!-- <input type="text" [(ngModel)]='name'><br>
+<label>Name: {{name}}</label>  -->
+</p>
+<!-- show values using constructor and function which are given in ts file -->
+<div class="container-fluid">
+  StudentName : {{person.firstName}} {{person.lastName}}<br>
+  subject Mark : {{mark}}
+  <p></p>
+  call function and display value : {{showName()}}
+</div>

@@ -6,9 +6,24 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <script src="../bootstrap/js/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    jQuery(document).ready(function(){
+      jQuery("#submitButton").click(function(){
+        jQuery("#displayId").show();
+      })
+      jQuery("#clearId").click(function(){
+        jQuery("#displayId").hide();
+      })
+      jQuery("#addId").click(function(){
+        jQuery("#resultId").show().hide(5000);
+      })
+    })
+  </script>
 </body>
 </html>
