@@ -13,6 +13,7 @@
   <button class="btn span2" id="clearId">clear</button>
   <br>
   <p id="displayId" style="display: none">
+    <br>
     R.No : {{no}}<br>
     Name : {{name}}<br>
     Age : {{age}}<br>
@@ -33,3 +34,23 @@
     welcome to my new component
   </mycomponent>
 </div>
+<h4 style="padding: 10px"> form using Angular Material Design</h4>
+<mat-card>
+  <mat-form-field>
+    <input matInput placeholder="Enter Your Name" [(ngModel)]="name"><br>
+  </mat-form-field><br>
+  <mat-form-field>
+    <input matInput placeholder="Enter Your Age" [(ngModel)]='age'><br>
+  </mat-form-field><br>
+  <mat-form-field>
+    <input matInput placeholder="Enter Your Dept" [(ngModel)]='dept'><br>
+  </mat-form-field><br>
+  <button mat-raised-button color="Accent" id="showButtonId">show</button>
+  <mat-grid-list cols="2" rowHeight="4:1">
+    <mat-grid-tile class="grid" id="dataId">
+      Name : {{name}}<br>
+      Age : {{age}}<br>
+      Dept : {{dept}}<br>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
