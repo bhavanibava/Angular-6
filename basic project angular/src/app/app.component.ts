@@ -19,16 +19,13 @@ export class AppComponent{
     this.value2 = 20;
   }
   amdShowFunction(){
-    this.amdHideValue = true;
+    this.amdHideValue = !this.amdHideValue;
   }
   show(){
-    this.hideOperation1 = true;
-  }
-  clear(){
-    this.hideOperation1 = false;
+    this.hideOperation1 = !this.hideOperation1;
   }
   addition(){
     this.ans = this.value1+this.value2;
-    this.hideOperation2 = true;
+    this.hideOperation2 = !this.hideOperation2;
   }
 }

@@ -14,7 +14,7 @@ export class MycomponentComponent implements OnInit {
     this.mark = 80;
   }
   show(){
-    this.hideValue=true;
+    this.hideValue=!this.hideValue;
     // this.person.firstName + this.person.lastName;
   }
   ngOnInit() {
