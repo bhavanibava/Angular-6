@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class MycomponentComponent implements OnInit {
   person;
   mark : number;
+  hideValue : boolean = false;
   constructor() { 
     this.person = {firstName : 'Bhava',lastName : 'Sai'}
     this.mark = 80;
   }
-  showName(){
-    return this.person.firstName + this.person.lastName;
+  show(){
+    this.hideValue=true;
+    // this.person.firstName + this.person.lastName;
   }
   ngOnInit() {
 

@@ -8,6 +8,8 @@
 <div class="container-fluid">
   StudentName : {{person.firstName}} {{person.lastName}}<br>
   subject Mark : {{mark}}
-  <p></p>
-  call function and display value : {{showName()}}
+  <button (click)='show()'>show</button>
+  <p *ngIf='hideValue'>
+    display value : {{person.firstName}} {{person.lastName}} and {{mark}}
+  </p>
 </div>

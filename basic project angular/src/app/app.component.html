@@ -9,10 +9,10 @@
   <input type="text" placeholder="Enter your Age " [(ngModel)]='age'><br>
   <input type="text" placeholder="Enter your dept" [(ngModel)]='dept'><br>
   <input type="text" placeholder="Enter your collage_Name" [(ngModel)]='clg_name'><br>
-  <button class="btn span2" id="submitButton">submit</button> 
-  <button class="btn span2" id="clearId">clear</button>
+  <button class="btn span2" (click)='show()'>submit</button> 
+  <button class="btn span2" *ngIf='hideOperation1' (click)='clear()'>clear</button>
   <br>
-  <p id="displayId" style="display: none">
+  <p *ngIf='hideOperation1'>
     <br>
     R.No : {{no}}<br>
     Name : {{name}}<br>
@@ -25,8 +25,8 @@
   ADD two numbers: 
   <input type="number" [(ngModel)]='value1'><br>
   <input type="number" [(ngModel)]='value2'><br>
-  <button class="btn" id="addId">Add</button>
-  <p id="resultId" style="display: none">result : {{addition()}}</p>
+  <button class="btn" (click)="addition()">Add</button>
+  <p *ngIf='hideOperation2'>Ans is {{ans}}</p>
 </div>
 <br>
 <div class="row-fluid">
@@ -34,6 +34,7 @@
     welcome to my new component
   </mycomponent>
 </div>
+<!-- AMD form -->
 <h4 style="padding: 10px"> form using Angular Material Design</h4>
 <mat-card>
   <mat-form-field>
@@ -45,12 +46,10 @@
   <mat-form-field>
     <input matInput placeholder="Enter Your Dept" [(ngModel)]='dept'><br>
   </mat-form-field><br>
-  <button mat-raised-button color="Accent" id="showButtonId">show</button>
-  <mat-grid-list cols="2" rowHeight="4:1">
-    <mat-grid-tile class="grid" id="dataId">
-      Name : {{name}}<br>
-      Age : {{age}}<br>
-      Dept : {{dept}}<br>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <button mat-raised-button color="primary" (click)='amdShowFunction()'>show</button>
+  <mat-card *ngIf='amdHideValue'>
+    Name : {{name}}<br>
+    Age : {{age}}<br>
+    Dept : {{dept}}<br>
+  </mat-card>
 </mat-card>
